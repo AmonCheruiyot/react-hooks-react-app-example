@@ -3,12 +3,10 @@ import { format } from "date-fns";
 import ExampleComponent from "./ExampleComponent";
 import TestComponent from "./TestComponent"; // Import TestComponent if it exists
 
-// Add your code within the return statement
 function App() {
   return (
     <div className="App">
-      {/* Render "Now" instead of the formatted date and time */}
-      <h1>Now</h1>
+      <h1>Now</h1> 
       <p className="App-intro">
         In React apps, we write JSX - it looks like HTML, and uses a lot of HTML
         syntax. JSX lets us include JavaScript functions right along with the
@@ -16,8 +14,7 @@ function App() {
         self-contained chunks of JSX.
       </p>
       <ExampleComponent />
-      {/* Include TestComponent if it exists */}
-      <TestComponent />
+      {TestComponent && <TestComponent />}
     </div>
   );
 }
